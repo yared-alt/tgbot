@@ -1,6 +1,16 @@
 import TelegramBot from "node-telegram-bot-api";
 import pkg from "dotenv";
 import axios from "axios";
+import express from "express";
+const app=express();
+
+app.get("/",(req,res)=>{
+    res.send("the bot is live!!")
+})
+app.listen((5000),()=>{
+    console.log("sever is running");
+    
+})
 const dotenv = pkg;
 dotenv.config();
 const token = process.env.Token;
